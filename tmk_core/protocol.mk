@@ -70,6 +70,10 @@ ifeq ($(strip $(DISABLE_AVR_DEEP_SLEEP)), yes)
     TMK_COMMON_DEFS += -DDISABLE_AVR_DEEP_SLEEP
 endif
 
+ifeq ($(strip $(DISABLE_AVR_DEEP_SLEEP)), yes)
+    TMK_COMMON_DEFS += -DDISABLE_AVR_DEEP_SLEEP
+endif
+
 ifeq ($(strip $(JOYSTICK_SHARED_EP)), yes)
     OPT_DEFS += -DJOYSTICK_SHARED_EP
     SHARED_EP_ENABLE = yes
