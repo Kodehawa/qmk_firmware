@@ -17,6 +17,20 @@
 
 #pragma once
 
+// Disable RGB when suspended: only useful if NO_USB_STARTUP_CHECK is not defined.
+#define RGB_DISABLE_WHEN_USB_SUSPENDED 1
+// Disable deep sleep: only useful if NO_USB_STARTUP_CHECK is not defined
+#undef wdt_vect
+
+// This makes the above define not work, but lol
+// This SHOULD work around the issue of the keyboard not working properly after suspend
+// Specially annoying when it made me reflash the keyboard god damn twice.
+#define NO_USB_STARTUP_CHECK
+
+// I don't really need more layouts: reduce size
+#define LAYER_STATE_8BIT
+
+// Default stuff below -- removed some RGB modes, though.
 #ifdef RGB_MATRIX_ENABLE
     #define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
     #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
@@ -51,13 +65,9 @@
     #define ENABLE_RGB_MATRIX_DUAL_BEACON
     #define ENABLE_RGB_MATRIX_RAINBOW_BEACON
     #define ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS
-    #define ENABLE_RGB_MATRIX_RAINDROPS
-    #define ENABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
     #define ENABLE_RGB_MATRIX_HUE_BREATHING
     #define ENABLE_RGB_MATRIX_HUE_PENDULUM
     #define ENABLE_RGB_MATRIX_HUE_WAVE
-    #define ENABLE_RGB_MATRIX_PIXEL_RAIN
-    #define ENABLE_RGB_MATRIX_PIXEL_FLOW
     #define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
 
     #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
