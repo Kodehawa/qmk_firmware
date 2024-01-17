@@ -43,7 +43,6 @@
     "BOTH_SHIFTS_TURNS_ON_CAPS_WORD": {"info_key": "caps_word.both_shifts_turns_on", "value_type": "bool"},
     "CAPS_WORD_IDLE_TIMEOUT": {"info_key": "caps_word.idle_timeout", "value_type": "int"},
     "CAPS_WORD_INVERT_ON_SHIFT": {"info_key": "caps_word.invert_on_shift", "value_type": "bool"},
-    "DISABLE_AVR_DEEP_SLEEP": {"info_key": "disable_avr_deep_sleep", "value_type": "bool"},
     "DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD": {"info_key": "caps_word.double_tap_shift_turns_on", "value_type": "bool"},
 
     // Combos
