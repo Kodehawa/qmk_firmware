@@ -22,11 +22,6 @@
 // Disable deep sleep: only useful if NO_USB_STARTUP_CHECK is not defined
 #define DISABLE_AVR_DEEP_SLEEP 1
 
-// This makes the above define not work, but lol
-// This SHOULD work around the issue of the keyboard not working properly after suspend
-// Specially annoying when it made me reflash the keyboard god damn twice.
-// #define NO_USB_STARTUP_CHECK
-
 // I don't really need more layouts: reduce size
 #define LAYER_STATE_8BIT
 
